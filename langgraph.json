@@ -1,0 +1,22 @@
+{
+    "python_version": "3.11",
+    "dependencies": [
+        "Pillow",
+        "numpy",
+        "opencv-python",
+        "langgraph",
+        "typing-extensions",
+        "google-generativeai",
+        "python-dotenv",
+        "langsmith"
+    ],
+    "graphs": {
+        "agent": "src.graph:guitar_sticker_graph"
+    },
+    "env": [
+        "GOOGLE_API_KEY",
+        "LANGSMITH_API_KEY",
+        "LANGSMITH_TRACING",
+        "LANGSMITH_PROJECT"
+    ]
+} 
