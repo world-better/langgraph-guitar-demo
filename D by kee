@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import replicate
 
 input = {
@@ -21,4 +22,29 @@ print(output[0].url())
 for index, item in enumerate(output):
     with open(f"output_{index}.png", "wb") as file:
         file.write(item.read())
+=======
+import replicate
+
+input = {
+    "mask": "https://replicate.delivery/pbxt/Le6GAg8i6DrhZxvjibNmzKy4jPYEKIhH8DBZnUp2WAioguXI/bucket_mask.jpeg",
+    "image": "https://replicate.delivery/pbxt/Le6GAdIHbCc7u5RAFQ09dqJoROHEayxjWQbg9Hx16aY2fa9L/bucket.png",
+    "prompt": "a person wearing a white shoe, carrying a white bucket with text 'REPLICATE FLUX INPAINTING CONTROLNET' on it",
+    "num_outputs": 10,
+    "output_format": "png"
+}
+
+output = replicate.run(
+    "zsxkib/flux-dev-inpainting-controlnet:f9cb02cfd6b131af7ff9166b4bac5fdd2ed68bc282d2c049b95a23cea485e40d",
+    input=input
+)
+
+# To access the file URLs:
+print(output[0].url())
+#=> "https://replicate.delivery/.../output_0.png"
+
+# To write the files to disk:
+for index, item in enumerate(output):
+    with open(f"output_{index}.png", "wb") as file:
+        file.write(item.read())
+>>>>>>> a3e489cf190e40a66cc90dd76735d0f86badb326
 #=> output_0.png, output_1.png, output_2.png, output_3.png, o...
