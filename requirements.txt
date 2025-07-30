@@ -1,0 +1,11 @@
+langchain-core
+langgraph
+langchain-google-genai
+python-dotenv
+Pillow
+opencv-python
+numpy
+typing-extensions
+langsmith
+replicate
+requests
